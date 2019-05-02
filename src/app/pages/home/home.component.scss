@@ -1,0 +1,16 @@
+.home-content {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+
+  &_block {
+    flex: 1;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .margin {
+    margin: 10px;
+  }
+}
