@@ -9,12 +9,7 @@ import {BasicTreeItemInterface} from '@app-classes/tree';
   styleUrls: ['./tree.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    {
-      provide: ModelTreeControlService,
-      useFactory: () => {
-        return new ModelTreeControlService(data => data.children);
-      }
-    }
+    ModelTreeControlService
   ]
 })
 export class TreeComponent implements OnInit {

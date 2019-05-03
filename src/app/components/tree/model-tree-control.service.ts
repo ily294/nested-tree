@@ -1,12 +1,16 @@
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {Observable} from 'rxjs';
 import {BasicTreeItemInterface} from '@app-classes/tree';
-import {Injectable} from '@angular/core';
+import {Inject, Injectable, InjectionToken} from '@angular/core';
+
+type GetChildrenFunction = (dataNode: BasicTreeItemInterface) => (Observable<BasicTreeItemInterface[]> | BasicTreeItemInterface[]);
+
+export const GET_CHILDREN_FUNCTION_TOKEN: InjectionToken<GetChildrenFunction> = new InjectionToken('components/tree/find-children');
 
 @Injectable()
 export class ModelTreeControlService extends NestedTreeControl<BasicTreeItemInterface> {
 
-  constructor(getChildren: (dataNode: BasicTreeItemInterface) => (Observable<BasicTreeItemInterface[]> | BasicTreeItemInterface[])) {
+  constructor(@Inject(GET_CHILDREN_FUNCTION_TOKEN) getChildren: GetChildrenFunction) {
     super(getChildren);
   }
 
