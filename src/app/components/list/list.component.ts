@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
 
   @Input()
   set items(items: BasicItemInterface[]) {
-    this.itemsList = items;
+    this.itemsList = [...items];
   }
 
 }
