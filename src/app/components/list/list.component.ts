@@ -1,5 +1,4 @@
-import {ChangeDetectionStrategy, Component, ContentChild, Input, OnInit, TemplateRef, ViewContainerRef} from '@angular/core';
-import {BasicItemInterface} from '@app-classes/basic-item.interface';
+import {ChangeDetectionStrategy, Component, ContentChild, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -12,7 +11,7 @@ export class ListComponent implements OnInit {
   @ContentChild(TemplateRef)
   contentTemplate: TemplateRef<any>;
 
-  itemsList: BasicItemInterface[];
+  itemsList: any[];
 
   constructor() {
   }
@@ -21,7 +20,7 @@ export class ListComponent implements OnInit {
   }
 
   @Input()
-  set items(items: BasicItemInterface[]) {
+  set items(items: any[]) {
     this.itemsList = [...items];
   }
 

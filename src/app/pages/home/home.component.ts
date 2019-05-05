@@ -1,8 +1,7 @@
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {TreeService} from '@app-services/tree';
-import {BasicTreeItemInterface} from '@app-classes/tree';
+import {BasicTreeItemInterface} from '@app-services/tree';
 import {mergeMap} from 'rxjs/operators';
-import {BasicItemInterface} from '@app-classes/basic-item.interface';
 import {of} from 'rxjs';
 
 @Component({
@@ -14,7 +13,7 @@ import {of} from 'rxjs';
 export class HomeComponent implements OnInit {
 
   tree: BasicTreeItemInterface[];
-  list: BasicItemInterface[];
+  list: { label: string }[];
 
   constructor(protected treeService: TreeService, protected changeDetectorRef: ChangeDetectorRef) {
   }

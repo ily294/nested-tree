@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LocalStorage} from '@ngx-pwa/local-storage';
-import {BasicTreeItemInterface} from '@app-classes/tree';
+import {BasicTreeItemInterface} from '@app-services/tree';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
 
