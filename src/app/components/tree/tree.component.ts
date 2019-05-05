@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {MatCheckboxChange} from '@angular/material';
 import {ModelTreeControlService} from '@app-components/tree/model-tree-control.service';
-import {BasicTreeItemInterface} from '@app-services/tree';
+import {BasicTreeItemInterface} from '@app-components/tree';
 
 @Component({
   selector: 'app-tree',

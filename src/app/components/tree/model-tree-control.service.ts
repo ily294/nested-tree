@@ -1,6 +1,6 @@
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {Observable} from 'rxjs';
-import {BasicTreeItemInterface} from '@app-services/tree';
+import {BasicTreeItemInterface} from '@app-components/tree';
 import {Inject, Injectable, InjectionToken} from '@angular/core';
 
 type GetChildrenFunction = (dataNode: BasicTreeItemInterface) => (Observable<BasicTreeItemInterface[]> | BasicTreeItemInterface[]);

@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {TreeService} from '@app-services/tree';
-import {BasicTreeItemInterface} from '@app-services/tree';
+import {BasicTreeItemInterface} from '@app-components/tree';
 import {mergeMap} from 'rxjs/operators';
 import {of} from 'rxjs';
 
